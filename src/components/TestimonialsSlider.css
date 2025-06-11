@@ -1,0 +1,205 @@
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 48px 16px;
+    text-align: center;
+}
+
+/* Карточка */
+.card {
+    background-color: white;
+    padding: 40px 24px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 460px;
+}
+
+/* Лого */
+.company-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+/* Отзыв */
+.testimonial-text {
+    color: #9B9A99;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    text-align: start;
+    position: relative;
+    padding-bottom: 40px;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.testimonial-text::after {
+    content: '';
+    background-image: url('/public/img/qoute.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    width: 38px;
+    height: 36px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Пользователь */
+.user-info {
+    display: flex;
+    align-items: flex-start;
+    margin-top: auto;
+}
+
+.user-avatar {
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 17px;
+}
+
+.user-name {
+    display: block;
+    color: #000000;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: 0;
+}
+
+.user-position {
+    color: #000000;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0;
+    text-align: start;
+}
+
+/* Обёртка */
+.testimonials-wrapper {
+    position: relative;
+    padding: 60px 0;
+}
+
+/* Контейнер слайдера */
+.testimonials-container {
+    position: relative;
+}
+
+/* Отступ под точки */
+.swiper-padding {
+    padding-bottom: 80px;
+}
+
+/* Стрелки */
+.swiper-custom-prev,
+.swiper-custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: white;
+    color: #D1CFCF;
+    border: 1px solid;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 28px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.swiper-custom-prev:hover,
+.swiper-custom-next:hover {
+    transform: translateY(-50%) scale(1.2);
+    color: #ffb703;
+}
+
+.swiper-custom-prev {
+    left: -60px;
+}
+
+.swiper-custom-next {
+    right: -60px;
+}
+
+/* Точки */
+.swiper-pagination {
+    bottom: 10px !important;
+}
+
+
+@media (max-width: 1024px) {
+    .swiper-custom-prev {
+        left: -40px;
+    }
+
+    .swiper-custom-next {
+        right: -40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 32px 20px;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .user-name {
+        font-size: 18px;
+    }
+
+    .user-position {
+        font-size: 15px;
+    }
+
+    .swiper-custom-prev,
+    .swiper-custom-next {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 24px 16px;
+    }
+
+    .testimonial-text {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-name {
+        font-size: 16px;
+    }
+
+    .user-position {
+        font-size: 14px;
+    }
+}
